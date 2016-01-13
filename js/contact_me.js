@@ -20,12 +20,14 @@ $(function() {
             $.ajax({
                 url: "././mail/contact_me.php",
                 type: "POST",
+                headers: {"Access-Control-Allow-Origin": "*"},
                 data: {
                     name: name,
                     phone: phone,
                     email: email,
                     message: message
                 },
+
                 cache: false,
                 success: function() {
                     // Success message
