@@ -20,7 +20,9 @@ $(function() {
             $.ajax({
                 url: "././mail/contact_me.php",
                 type: "POST",
-                headers: {"Access-Control-Allow-Origin": "*"},
+                headers: {"Access-Control-Allow-Origin": "*",
+                           "Access-Control-Allow-Methods": 'POST'},
+
                 data: {
                     name: name,
                     phone: phone,
